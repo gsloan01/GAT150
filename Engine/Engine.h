@@ -4,6 +4,8 @@
 #include "Resources/ResourceManager.h"
 #include "Core/InputSystem.h"
 #include "Core/Timer.h"
+#include "Physics/PhysicsSystem.h"
+#include "Audio/AudioSystem.h"
 
 namespace nc
 {

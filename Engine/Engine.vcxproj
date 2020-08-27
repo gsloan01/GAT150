@@ -90,15 +90,15 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson;$(SolutionDir)Middleware\Box2D\include;$(SolutionDir)Middleware\fmod\api\core\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;;fmod_vc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\lib\x86;$(SolutionDir)Middleware\fmod\api\core\lib\x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -109,15 +109,15 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson;$(SolutionDir)Middleware\Box2D\include;$(SolutionDir)Middleware\fmod\api\core\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;box2d.lib;fmod_vc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\lib\x64;$(SolutionDir)Middleware\Box2D\lib;$(SolutionDir)Middleware\fmod\api\core\lib\x64;$(SolutionDir)Middleware\fmod\api\core\lib\x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -130,7 +130,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson;$(SolutionDir)Middleware\Box2D\include;$(SolutionDir)Middleware\fmod\api\core\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -139,7 +139,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;;fmod_vc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>;$(SolutionDir)Middleware\fmod\api\core\lib\x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -152,7 +153,7 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Middleware\SDL2-2.0.12\include;$(ProjectDir);$(SolutionDir)Middleware\JSON\include\rapidjson;$(SolutionDir)Middleware\Box2D\include;$(SolutionDir)Middleware\fmod\api\core\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -161,13 +162,19 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;box2d.lib;fmod_vc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>;$(SolutionDir)Middleware\Box2D\lib;$(SolutionDir)Middleware\fmod\api\core\lib\x64;$(SolutionDir)Middleware\fmod\api\core\lib\x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Audio\AudioChannel.h" />
+    <ClInclude Include="Audio\AudioComponent.h" />
+    <ClInclude Include="Audio\AudioSystem.h" />
+    <ClInclude Include="Audio\Sound.h" />
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\PhysicsComponent.h" />
     <ClInclude Include="Components\RenderComponent.h" />
+    <ClInclude Include="Components\RigidBodyComponent.h" />
     <ClInclude Include="Components\SpriteAnimationComponent.h" />
     <ClInclude Include="Components\SpriteComponent.h" />
     <ClInclude Include="Core\Assert.h" />
@@ -193,11 +200,18 @@
     <ClInclude Include="Objects\ObjectFactory.h" />
     <ClInclude Include="Objects\Scene.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Physics\ContactListener.h" />
+    <ClInclude Include="Physics\PhysicsSystem.h" />
     <ClInclude Include="Resources\Resource.h" />
     <ClInclude Include="Resources\ResourceManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Audio\AudioChannel.cpp" />
+    <ClCompile Include="Audio\AudioComponent.cpp" />
+    <ClCompile Include="Audio\AudioSystem.cpp" />
+    <ClCompile Include="Audio\Sound.cpp" />
     <ClCompile Include="Components\PhysicsComponent.cpp" />
+    <ClCompile Include="Components\RigidBodyComponent.cpp" />
     <ClCompile Include="Components\SpriteAnimationComponent.cpp" />
     <ClCompile Include="Components\SpriteComponent.cpp" />
     <ClCompile Include="Core\Assert.cpp" />
@@ -219,6 +233,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Physics\ContactListener.cpp" />
+    <ClCompile Include="Physics\PhysicsSystem.cpp" />
     <ClCompile Include="Resources\ResourceManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

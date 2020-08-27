@@ -7,13 +7,14 @@ bool nc::json::Load(const std::string& filename, rapidjson::Document& document)
 {
 	bool success = false;
 	std::ifstream stream(filename);
-	ASSERT_MSG(stream.good(), "ERROR loading json : " + filename);
 
+	ASSERT_MSG(stream.is_open(), "ERROR file not loaded : " + filename);
 	if (stream.is_open())
 	{
 		rapidjson::IStreamWrapper istream(stream);
 		document.ParseStream(istream);
 		success = document.IsObject();
+		ASSERT_MSG(success, "ERROR json is not valid : " + filename);
 	}
 	return success;
 
